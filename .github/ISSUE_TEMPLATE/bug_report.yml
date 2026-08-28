@@ -1,0 +1,63 @@
+name: Bug report
+description: Report a reproducible problem in a HemSoft project
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please provide enough detail for someone else to reproduce it.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and its impact.
+      placeholder: Tell us what went wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How can we reproduce it?
+      description: List the smallest reliable sequence that triggers the problem.
+      placeholder: |
+        1. Start with...
+        2. Run...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: Describe the expected result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include the version, commit, operating system, runtime, browser, or device when relevant.
+      placeholder: Version, commit, OS, runtime, browser, or device
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs and other evidence
+      description: Add logs, screenshots, recordings, or links. Remove credentials and personal information first.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and did not find this problem already reported.
+          required: true
+        - label: I removed credentials and personal information from the evidence above.
+          required: true

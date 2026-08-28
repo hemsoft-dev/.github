@@ -1,0 +1,54 @@
+name: Feature request
+description: Propose an improvement to a HemSoft project
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem before proposing the implementation. This helps us judge the request without locking into one design too early.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Explain who has the problem, what they are trying to do, and what blocks them today.
+      placeholder: Describe the current problem and its impact.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What outcome do you want?
+      description: Describe observable behavior that would make this request complete.
+      placeholder: Describe the result, not only the implementation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+      description: Share an implementation idea if you have one.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe workarounds or other approaches you considered.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add examples, screenshots, links, or related issues.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and did not find an equivalent request.
+          required: true
