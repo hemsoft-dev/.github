@@ -9,7 +9,17 @@ instead of these defaults.
 
 ## Default issue forms
 
-- Bug report
-- Feature request
+- Bug Report collects reproducible behavior, acceptance criteria, environment,
+  evidence, and suggested validation.
+- Feature Request collects the problem, use cases, desired outcome, acceptance
+  criteria, scope, and constraints.
+- Implementation Task defines bounded, testable work for a human or coding
+  agent, including a required validation plan.
 
-Blank issues remain available for work that does not fit either form.
+Blank issues are disabled in the web chooser. Maintainers and programmatic API
+callers can still create issues outside these forms.
+
+## Completion standard
+
+Implementation work follows the shared [Definition of Done](DEFINITION_OF_DONE.md)
+and any stricter instructions or quality gates in the target repository.

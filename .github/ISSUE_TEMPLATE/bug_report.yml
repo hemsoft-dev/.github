@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a reproducible problem in a HemSoft project
+description: Report a problem in a HemSoft project
 title: "[Bug]: "
 labels:
   - bug
@@ -7,14 +7,14 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting a problem. Please provide enough detail for someone else to reproduce it.
+        Thanks for reporting a problem. Do not include credentials or personal information. Report suspected security vulnerabilities through the repository's private security channel when one is available.
 
   - type: textarea
-    id: description
+    id: actual_behavior
     attributes:
       label: What happened?
-      description: Describe the problem and its impact.
-      placeholder: Tell us what went wrong.
+      description: Describe the observed behavior and its impact.
+      placeholder: Tell us what went wrong and who or what it affects.
     validations:
       required: true
 
@@ -22,7 +22,7 @@ body:
     id: reproduce
     attributes:
       label: How can we reproduce it?
-      description: List the smallest reliable sequence that triggers the problem.
+      description: List the smallest reliable sequence that triggers the problem. Say so if it is intermittent.
       placeholder: |
         1. Start with...
         2. Run...
@@ -31,12 +31,29 @@ body:
       required: true
 
   - type: textarea
-    id: expected
+    id: expected_behavior
     attributes:
       label: What did you expect?
       placeholder: Describe the expected result.
     validations:
       required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: List observable checks that would prove the problem is fixed.
+      placeholder: |
+        - The reproduction steps no longer trigger the problem.
+        - Existing related behavior still works.
+    validations:
+      required: true
+
+  - type: textarea
+    id: regression
+    attributes:
+      label: Did this work before?
+      description: Include the last known working version or commit when this is a regression.
 
   - type: textarea
     id: environment
@@ -46,11 +63,29 @@ body:
       placeholder: Version, commit, OS, runtime, browser, or device
 
   - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Paste text logs or stack traces. Remove credentials and personal information first.
+      render: shell
+
+  - type: textarea
     id: evidence
     attributes:
-      label: Logs and other evidence
-      description: Add logs, screenshots, recordings, or links. Remove credentials and personal information first.
-      render: shell
+      label: Screenshots, recordings, files, or links
+      description: Attach supporting evidence or link to a minimal reproduction. This field supports Markdown and file attachments.
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints and scope notes
+      description: Record compatibility requirements, affected areas, or behavior that must not change.
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Suggested validation plan
+      description: Suggest automated tests, manual checks, or regression coverage when known. Maintainers must complete this before assigning implementation work.
 
   - type: checkboxes
     id: checks

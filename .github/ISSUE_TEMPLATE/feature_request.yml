@@ -19,13 +19,41 @@ body:
       required: true
 
   - type: textarea
+    id: use_cases
+    attributes:
+      label: Use cases
+      description: Give concrete examples of when this improvement would be valuable.
+      placeholder: |
+        1. When...
+        2. When...
+    validations:
+      required: true
+
+  - type: textarea
     id: outcome
     attributes:
       label: What outcome do you want?
-      description: Describe observable behavior that would make this request complete.
-      placeholder: Describe the result, not only the implementation.
+      description: Describe the user-visible result, not only the implementation.
+      placeholder: Describe what becomes possible or easier.
     validations:
       required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: List observable, testable conditions that would make this request complete.
+      placeholder: |
+        - A user can...
+        - The system does not...
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and non-goals
+      description: State what belongs in this request and what should remain unchanged.
 
   - type: textarea
     id: proposal
@@ -40,10 +68,22 @@ body:
       description: Describe workarounds or other approaches you considered.
 
   - type: textarea
+    id: constraints
+    attributes:
+      label: Dependencies and constraints
+      description: Include compatibility requirements, related issues, external dependencies, or known risks.
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Suggested validation plan
+      description: Suggest automated tests, manual checks, or success measurements when known. Maintainers must complete this before assigning implementation work.
+
+  - type: textarea
     id: context
     attributes:
       label: Additional context
-      description: Add examples, screenshots, links, or related issues.
+      description: Add examples, screenshots, files, links, or related issues.
 
   - type: checkboxes
     id: checks

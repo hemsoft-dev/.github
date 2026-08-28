@@ -1,0 +1,93 @@
+name: Implementation task
+description: Define implementation-ready work for a human or coding agent
+title: "[Task]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for work that is ready to implement. Initial ideas belong in Feature Request. Repository-specific instructions and the shared Definition of Done still apply.
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: State the concrete result this task must deliver.
+      placeholder: Describe the outcome in one or two sentences.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Explain why the work is needed and link related issues, pull requests, designs, or incidents.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: In scope
+      description: List the behavior, components, or deliverables included in this task.
+      placeholder: |
+        - Change...
+        - Add...
+    validations:
+      required: true
+
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals
+      description: List tempting adjacent work that this task must not include. Write "None" only when the boundary is already unambiguous.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: List observable, testable conditions. These are the issue-specific conditions for completion.
+      placeholder: |
+        - [ ] When..., the system...
+        - [ ] Existing... remains unchanged.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and constraints
+      description: Record compatibility requirements, blocked work, external systems, deadlines, or known risks. Write "None" when there are none.
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation_plan
+    attributes:
+      label: Validation plan
+      description: Name the automated tests, manual checks, and regression coverage that will prove the acceptance criteria.
+      placeholder: |
+        Automated:
+        - ...
+
+        Manual:
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: relevant_areas
+    attributes:
+      label: Relevant files or subsystems
+      description: Add likely files, modules, services, or documentation when known. Leave discovery to the implementer when uncertain.
+
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Readiness
+      options:
+        - label: I confirmed that the scope is bounded and the acceptance criteria are testable.
+          required: true
+        - label: I will follow the [HemSoft Definition of Done](https://github.com/HemSoft/.github/blob/main/DEFINITION_OF_DONE.md) and the target repository's instructions.
+          required: true
