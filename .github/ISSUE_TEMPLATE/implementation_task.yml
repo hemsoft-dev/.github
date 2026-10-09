@@ -89,5 +89,5 @@ body:
       options:
         - label: I confirmed that the scope is bounded and the acceptance criteria are testable.
           required: true
-        - label: I will follow the [HemSoft Definition of Done](https://github.com/HemSoft/.github/blob/main/DEFINITION_OF_DONE.md) and the target repository's instructions.
+        - label: I will follow the [HemSoft Definition of Done](https://github.com/hemsoft-dev/.github/blob/main/DEFINITION_OF_DONE.md) and the target repository's instructions.
           required: true
